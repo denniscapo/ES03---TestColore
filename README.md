@@ -1,6 +1,6 @@
 # es01-rtos 
 ## PROGETTO NASTRO TRASPORTATORE-Sensore ad ultrasuoni
-![Schemi per il collegamento dell’hardware](https://github.com/denniscapo/es01rtos/blob/main/Cattura.PNG)
+![Schemi per il collegamento dell’hardware](https://github.com/denniscapo/ES03_TestColore/blob/main/Cattura.PNG)
 ![Immagine Sensore ad infrarossi](https://i1.wp.com/www.arduiner.com/wp-content/uploads/2013/01/14418-Infrarossi-reflective-Fotoelettrico-Pulsante-IR-Barrier-Line-Tracking-Sensore-TCRT5000L-Arduino.jpg?fit=500%2C300&ssl=1) 
 
 **SPECIFICHE TCRT5000-IR-Sensor-Module**
@@ -19,7 +19,7 @@ La quantità di luce infrarossa emessa può essere regolata utilizzando un resis
 
 
 
-![Schemi per il collegamento dell’hardware](https://github.com/denniscapo/es01rtos/blob/main/Catturaf.PNG)
+![Schemi per il collegamento dell’hardware](https://github.com/denniscapo/ES03_TestColore/blob/main/Catturaf.PNG)
 
 Il ***sensore ad infrarossi*** è necessario per il controllo del colore, tramite il quale viene verificato il colore dell’oggetto posizionato sul rullo. Il sensore è collegato tramite un cavo alla scheda ***STM32.*** Nello specifico collegato al pin ***PE10,*** il quale è settato come ***input.*** Questa task deve essere eseguita quando l’ultrasuoni rileva un oggetto. Questo meccanico di comunicazioni tra task lo gestiamo con gli eventgroup. Quando il flag dell’ ultrasuoni è attivo la task dell’ infrarossi viene eseguita e quando viene rilevato un oggetto attiva un flag che serve per l’attivazione e esecuzione delle task successive (Task smista oggetto e LCD). 
 
